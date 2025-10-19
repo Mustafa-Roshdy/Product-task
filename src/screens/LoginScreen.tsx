@@ -31,7 +31,6 @@ export default function LoginScreen() {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState('');
 
-  // Animation values
   const fadeAnim = useRef(new Animated.Value(0)).current;
   const slideAnim = useRef(new Animated.Value(50)).current;
   const scaleAnim = useRef(new Animated.Value(0.9)).current;
@@ -255,11 +254,7 @@ export default function LoginScreen() {
         >
           {/* Header with gradient effect */}
           <View style={styles.header}>
-            <View style={styles.logoContainer}>
-              <View style={styles.logoCircle}>
-                <View style={styles.logoInner} />
-              </View>
-            </View>
+            
             <Text style={styles.title}>Products Store</Text>
             <Text style={styles.subtitle}>Welcome back! Sign in to continue</Text>
           </View>
@@ -316,7 +311,7 @@ export default function LoginScreen() {
                 {isLoading ? (
                   <ActivityIndicator color="#fff" />
                 ) : (
-                  <Text style={styles.loginButtonText}>Sign In</Text>
+                  <Text style={styles.loginButtonText}>Login</Text>
                 )}
               </TouchableOpacity>
             </Animated.View>
@@ -510,6 +505,7 @@ const styles = StyleSheet.create({
     opacity: 0.6,
   },
   loginButtonText: {
+    marginTop:10,
     color: '#fff',
     fontSize: 18,
     fontWeight: '700',
